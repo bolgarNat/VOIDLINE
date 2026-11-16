@@ -2,3 +2,8 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+const sidebar = document.getElementById("sidebar");
+function sidebar_change() {
+    sidebar.classList.toggle("active");
+}

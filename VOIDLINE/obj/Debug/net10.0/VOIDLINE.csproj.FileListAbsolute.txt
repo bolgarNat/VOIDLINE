@@ -22,9 +22,7 @@ C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\rjsmcshtml
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\scopedcss\bundle\VOIDLINE.styles.css
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\scopedcss\projectbundle\VOIDLINE.bundle.scp.css
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\gzegdillc8-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\6nso4metb8-{0}-61n19gt1b8-61n19gt1b8.gz
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\ezm1zofju1-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\hvk3dazp1v-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\96li1zyobk-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\maya1m0yef-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -98,3 +96,5 @@ C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\VOIDLINE.p
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\VOIDLINE.genruntimeconfig.cache
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\ref\VOIDLINE.dll
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\VOIDLINE.csproj.Up2Date
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\ezm1zofju1-{0}-tu2jx0vs9y-tu2jx0vs9y.gz
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\gzegdillc8-{0}-1qc2equuzo-1qc2equuzo.gz

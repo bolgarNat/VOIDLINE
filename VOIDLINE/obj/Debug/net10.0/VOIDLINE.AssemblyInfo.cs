@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VOIDLINE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+962a2eb746803457e5699021876af52ac3fd833d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ecac589320da7274b8969d0cb2e19b7381da58c")]
 [assembly: System.Reflection.AssemblyProductAttribute("VOIDLINE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VOIDLINE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

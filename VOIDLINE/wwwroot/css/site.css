@@ -1,5 +1,15 @@
+:root {
+    --primary-color: #007bff;
+    --font-color: #262b33;
+    --bg-color: #ffffff;
+    --heading-color: #222222;
+    --secondary-bg: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+    color: var(--font-color);
 }
 
 @media (min-width: 768px) {
@@ -18,7 +28,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    color: var(--font-color);
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -28,4 +39,58 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--secondary-bg);
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+}
+
+.navbar-item {
+
+}
+
+.item-1 {
+    flex: 2;
+    text-align: left;
+}
+
+.item-2 {
+    flex: 12;
+    text-align: center;
+    font-size: 26pt;
+}
+
+.item-3 {
+    flex: 2;
+    text-align: right;
+}
+
+.sidebar {
+    background-color: var(--secondary-bg);
+    position: fixed;
+    height: 100%;
+    width: 350px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
 }
