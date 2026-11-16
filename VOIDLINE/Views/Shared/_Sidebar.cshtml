@@ -1,9 +1,25 @@
-﻿
-<div class="sidebar" id="sidebar">
-</div>
+﻿@using VOIDLINE.Models.Database
+@model List<Categoryvariant>
 
-@*
-    
-*@
-@{
-}
+<html>
+    <body>
+        <div class="sidebar" id="sidebar">
+
+            <p style="font-size: 22pt">NEW</p>
+            <p style="font-size: 22pt; margin-bottom: 15px">Collaboration</p>
+
+            @if (Model != null)
+            {
+                @foreach (var categoryVariant in Model)
+                {
+                    <p style="font-size: 16pt; margin-top: 15px">@categoryVariant.Name</p>
+
+                    @foreach (var category in categoryVariant.Categories)
+                    {
+                        <p>@category.Name</p>
+                    }
+                }
+            }
+        </div>
+    </body>
+</html>

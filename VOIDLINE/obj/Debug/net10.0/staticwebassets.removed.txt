@@ -1,0 +1,3 @@
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-account-30.png
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-basket-30.png
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-menu-30.png

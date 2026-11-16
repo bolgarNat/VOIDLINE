@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using VOIDLINE.Models.Database;
 
-namespace VOIDLINE.Models.Database;
+namespace VOIDLINE.Models;
 
 public partial class DBContext : DbContext
 {
@@ -16,6 +17,8 @@ public partial class DBContext : DbContext
     }
 
     public virtual DbSet<Category> Categories { get; set; }
+
+    public virtual DbSet<Categoryvariant> Categoryvariants { get; set; }
 
     public virtual DbSet<Color> Colors { get; set; }
 
@@ -46,6 +49,25 @@ public partial class DBContext : DbContext
             entity.HasKey(e => e.Id).HasName("categories_pkey");
 
             entity.ToTable("categories");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("gen_random_uuid()")
+                .HasColumnName("id");
+            entity.Property(e => e.Categoryvariantid).HasColumnName("categoryvariantid");
+            entity.Property(e => e.Name)
+                .HasMaxLength(100)
+                .HasColumnName("name");
+
+            entity.HasOne(d => d.Categoryvariant).WithMany(p => p.Categories)
+                .HasForeignKey(d => d.Categoryvariantid)
+                .HasConstraintName("categories_categoryvariantid_fkey");
+        });
+
+        modelBuilder.Entity<Categoryvariant>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("categoryvariants_pkey");
+
+            entity.ToTable("categoryvariants");
 
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("gen_random_uuid()")

@@ -12,17 +12,30 @@
 <body>
     <!-- Header -->
     <header class="navbar">
-        <div class="navbar-item item-1" onclick="sidebar_change()" style="cursor:pointer">Навигация</div>
-        <div class="navbar-item item-2">VOIDLINE</div>
+        <div class="navbar-item item-1" onclick="sidebar_change()">
+            <span>
+                <img src="~/icons/Menu_Icon.png" />
+            </span>
+        </div>
+        <div class="navbar-item item-2">
+            VOIDLINE
+        </div>
         <div class="navbar navbar-item item-3">
-            <div>Аккаунт</div>
-            <div>Корзина</div>
-            <div>Язык</div>
+            <span>
+                <img src="~/icons/Account_Icon.png" />
+            </span>
+        </div>
+        <div class="navbar navbar-item item-4">
+            <span>
+                <img src="~/icons/Basket_Icon.png" />
+            </span>
         </div>
     </header>
 
     <!-- Sidebar -->
-    <partial name="_Sidebar" />
+    <aside>
+        <partial name="_Sidebar" />
+    </aside>
 
     <!-- Body -->
     <div class="container">
@@ -30,12 +43,11 @@
             @RenderBody()
         </main>
     </div>
-    <h1 style="font-size=50">vrgrgr<br />vrgrgrvrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br />vrgrgr<br /></h1>
 
     <!-- Footer -->
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2026 - VOIDLINE - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2026 - VOIDLINE
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
