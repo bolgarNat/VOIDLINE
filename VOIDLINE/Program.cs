@@ -33,5 +33,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Home}/{id?}")
     .WithStaticAssets();
 
-
 app.Run();

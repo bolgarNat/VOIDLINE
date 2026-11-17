@@ -1,5 +1,4 @@
 ﻿@using VOIDLINE.Models.Database
-@model List<Categoryvariant>
 
 <html>
     <body>
@@ -8,16 +7,13 @@
             <p style="font-size: 22pt">NEW</p>
             <p style="font-size: 22pt; margin-bottom: 15px">Collaboration</p>
 
-            @if (Model != null)
+            @foreach (var categoryVariant in (List<Categoryvariant>)ViewData["Category"]!)
             {
-                @foreach (var categoryVariant in Model)
-                {
-                    <p style="font-size: 16pt; margin-top: 15px">@categoryVariant.Name</p>
+                <p style="font-size: 16pt; margin-top: 15px">@categoryVariant.Name</p>
 
-                    @foreach (var category in categoryVariant.Categories)
-                    {
-                        <p>@category.Name</p>
-                    }
+                @foreach (var category in categoryVariant.Categories)
+                {
+                    <p>@category.Name</p>
                 }
             }
         </div>

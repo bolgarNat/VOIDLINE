@@ -10,17 +10,31 @@ public class HomeController : Controller
 {
     private readonly DatabaseService<Categoryvariant> _categoryService;
 
-    public HomeController(DatabaseService<Categoryvariant> categoryService)
+    private readonly DatabaseService<Product> _productService;
+
+    public HomeController(DatabaseService<Categoryvariant> categoryService, DatabaseService<Product> productService)
     {
         _categoryService = categoryService;
+        _productService = productService;
     }
 
     public async Task<IActionResult> Home()
     {
         await _categoryService.FillForeignTables();
-        var categories = await _categoryService.ReadFunc();
 
-        return View(categories);
+        var categoryServiceData = await _categoryService.ReadFunc();
+        if (categoryServiceData != null)
+        {
+            ViewData["Category"] = categoryServiceData;
+        }
+
+        var productServiceData = await _productService.ReadFunc();
+        if (productServiceData != null)
+        {
+            ViewData["Product"] = productServiceData;
+        }
+
+        return View();
     }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

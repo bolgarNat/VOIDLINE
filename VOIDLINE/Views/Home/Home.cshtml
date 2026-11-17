@@ -1,1 +1,10 @@
-﻿
+﻿@using VOIDLINE.Models.Database
+
+<html>
+	<body>
+	@foreach (var product in (List<Product>)ViewData["Product"]!)
+		{
+			<p>@product.ToString</p>
+		}
+	</body>
+</html>
