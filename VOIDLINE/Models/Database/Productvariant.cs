@@ -9,8 +9,6 @@ public partial class Productvariant
 
     public Guid Productid { get; set; }
 
-    public Guid Materialid { get; set; }
-
     public Guid Sizeid { get; set; }
 
     public Guid Colorid { get; set; }
@@ -19,9 +17,11 @@ public partial class Productvariant
 
     public int Stock { get; set; }
 
-    public virtual Color Color { get; set; } = null!;
+    public decimal Sale { get; set; }
 
-    public virtual Material Material { get; set; } = null!;
+    public string? UrlAdress { get; set; }
+
+    public virtual Color Color { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;
 

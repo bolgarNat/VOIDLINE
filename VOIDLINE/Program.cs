@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using VOIDLINE.Models;
+using VOIDLINE.Models.Database;
 using VOIDLINE.Services;
 
 var builder = WebApplication.CreateBuilder(args);

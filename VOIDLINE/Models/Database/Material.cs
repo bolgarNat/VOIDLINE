@@ -10,6 +10,4 @@ public partial class Material
     public string Name { get; set; } = null!;
 
     public virtual ICollection<Productmaterial> Productmaterials { get; set; } = new List<Productmaterial>();
-
-    public virtual ICollection<Productvariant> Productvariants { get; set; } = new List<Productvariant>();
 }

@@ -178,7 +178,6 @@ public partial class DBContext : DbContext
                 .HasDefaultValueSql("gen_random_uuid()")
                 .HasColumnName("id");
             entity.Property(e => e.Colorid).HasColumnName("colorid");
-            entity.Property(e => e.Materialid).HasColumnName("materialid");
             entity.Property(e => e.Price)
                 .HasPrecision(10, 2)
                 .HasColumnName("price");
@@ -190,11 +189,6 @@ public partial class DBContext : DbContext
                 .HasForeignKey(d => d.Colorid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("productvariants_colorid_fkey");
-
-            entity.HasOne(d => d.Material).WithMany(p => p.Productvariants)
-                .HasForeignKey(d => d.Materialid)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("productvariants_materialid_fkey");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Productvariants)
                 .HasForeignKey(d => d.Productid)

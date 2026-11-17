@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VOIDLINE.Models;
+using VOIDLINE.Models.Database;
 
 namespace VOIDLINE.Services;
 
 public class DatabaseService<T> where T : class
 {
-    private readonly DBContext _context;
+    private readonly Models.Database.DBContext _context;
 
-    public DatabaseService(DBContext context)
+    public DatabaseService(Models.Database.DBContext context)
     {
         _context = context;
     }
