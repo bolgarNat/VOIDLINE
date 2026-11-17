@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using VOIDLINE.Models.Database;
 
-namespace VOIDLINE.Models;
+namespace VOIDLINE.Models.Database;
 
 public partial class Color
 {

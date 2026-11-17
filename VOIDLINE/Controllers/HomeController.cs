@@ -15,7 +15,7 @@ public class HomeController : Controller
         _categoryService = categoryService;
     }
 
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Home()
     {
         await _categoryService.FillForeignTables();
         var categories = await _categoryService.ReadFunc();

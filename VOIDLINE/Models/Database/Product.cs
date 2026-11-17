@@ -11,9 +11,13 @@ public partial class Product
 
     public Guid Categoryid { get; set; }
 
+    public Guid Genderid { get; set; }
+
     public string? Description { get; set; }
 
     public virtual Category Category { get; set; } = null!;
+
+    public virtual Gender Gender { get; set; } = null!;
 
     public virtual ICollection<Productmaterial> Productmaterials { get; set; } = new List<Productmaterial>();
 

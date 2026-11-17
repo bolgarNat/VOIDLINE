@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using VOIDLINE.Models.Database;
 
-namespace VOIDLINE.Models;
+namespace VOIDLINE.Models.Database;
 
 public partial class DBContext : DbContext
 {
@@ -21,6 +20,8 @@ public partial class DBContext : DbContext
     public virtual DbSet<Categoryvariant> Categoryvariants { get; set; }
 
     public virtual DbSet<Color> Colors { get; set; }
+
+    public virtual DbSet<Gender> Genders { get; set; }
 
     public virtual DbSet<Material> Materials { get; set; }
 
@@ -41,6 +42,7 @@ public partial class DBContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder
+            .HasPostgresEnum("valid_gender", new[] { "Male", "Female", "Boy", "Girl", "Unisex", "No Gender" })
             .HasPostgresEnum("valid_sizes", new[] { "XXS", "XS", "S", "S-M", "M", "M-L", "L", "L-XL", "XL", "XXL", "XXXL" })
             .HasPostgresExtension("pgcrypto");
 
@@ -91,6 +93,17 @@ public partial class DBContext : DbContext
                 .HasColumnName("name");
         });
 
+        modelBuilder.Entity<Gender>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("gender_pkey");
+
+            entity.ToTable("gender");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("gen_random_uuid()")
+                .HasColumnName("id");
+        });
+
         modelBuilder.Entity<Material>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("materials_pkey");
@@ -116,6 +129,7 @@ public partial class DBContext : DbContext
                 .HasColumnName("id");
             entity.Property(e => e.Categoryid).HasColumnName("categoryid");
             entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Genderid).HasColumnName("genderid");
             entity.Property(e => e.Name)
                 .HasMaxLength(300)
                 .HasColumnName("name");
@@ -124,6 +138,11 @@ public partial class DBContext : DbContext
                 .HasForeignKey(d => d.Categoryid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("products_categoryid_fkey");
+
+            entity.HasOne(d => d.Gender).WithMany(p => p.Products)
+                .HasForeignKey(d => d.Genderid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("products_genderid_fkey");
         });
 
         modelBuilder.Entity<Productmaterial>(entity =>

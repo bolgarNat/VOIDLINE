@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VOIDLINE.Models;
+namespace VOIDLINE.Models.Database;
 
 public partial class Categoryvariant
 {
