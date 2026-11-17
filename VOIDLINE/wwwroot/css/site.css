@@ -68,19 +68,30 @@ p {
 }
 
 .item-2 {
-    flex: 29;
-    text-align: center;
-    font-size: 26pt;
+    display: flex;
+    flex: 25;
+    justify-content: center;
 }
+
+.item-2-text {
+    font-size: 26pt;
+    width: max-content;
+
+    transition: all 0.5s ease;
+}
+
+    .item-2-text:hover {
+        transform: scale(1.15);
+    }
 
 .item-3 {
     flex: 1;
-    text-align: right;
+    text-align: left;
 }
 
 .item-4 {
     flex: 1;
-    text-align: right;
+    text-align: left;
 }
 
 .sidebar {
@@ -105,3 +116,17 @@ p {
     visibility: visible;
     opacity: 1;
 }
+
+.navbar-icon {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+
+    transition: all 0.5s ease;
+}
+
+    .navbar-icon:hover {
+        background-color: var(--border-color);
+        transform: scale(1.15);
+    }
