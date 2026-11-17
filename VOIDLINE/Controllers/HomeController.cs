@@ -2,23 +2,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using VOIDLINE.Models;
+using VOIDLINE.Services;
 
 namespace VOIDLINE.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly DBContext _context = new DBContext();
+    private readonly DatabaseService<Categoryvariant> _categoryService;
+
+    public HomeController(DatabaseService<Categoryvariant> categoryService)
+    {
+        _categoryService = categoryService;
+    }
 
     public async Task<IActionResult> Index()
     {
-        var variant = await _context.Categoryvariants
-            .Include(v => v.Categories)
-            .ToListAsync();
+        await _categoryService.FillForeignTables();
+        var categories = await _categoryService.ReadFunc();
 
-        var categoryVariants = await _context.Categoryvariants
-            .ToListAsync();
-
-        return View(categoryVariants);
+        return View(categories);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

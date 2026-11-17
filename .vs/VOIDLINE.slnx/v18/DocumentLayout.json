@@ -11,20 +11,28 @@
       "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\services\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\voidline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\voidline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|c:\\users\\asus\\source\\repos\\aspnet\\voidline\\voidline\\voidline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1770452C-D0A7-9655-742F-3AB66A2369F3}|VOIDLINE\\VOIDLINE.csproj|solutionrelative:voidline\\voidline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,18 +41,18 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 1319,
-          "SelectedChildIndex": 4,
+          "DockedHeight": 993,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "VOIDLINE\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "VOIDLINE\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBMAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAjwCwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-16T10:43:25.708Z",
               "IsPinned": true,
@@ -58,7 +66,7 @@
               "RelativeDocumentMoniker": "VOIDLINE\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Controllers\\HomeController.cs",
               "RelativeToolTip": "VOIDLINE\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T19:03:31.915Z",
               "IsPinned": true,
@@ -67,6 +75,33 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Services\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "VOIDLINE\\Services\\DatabaseService.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Services\\DatabaseService.cs",
+              "RelativeToolTip": "VOIDLINE\\Services\\DatabaseService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T12:55:19.452Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\appsettings.json",
+              "RelativeDocumentMoniker": "VOIDLINE\\appsettings.json",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\appsettings.json",
+              "RelativeToolTip": "VOIDLINE\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-17T13:18:36.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "_Sidebar.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Views\\Shared\\_Sidebar.cshtml",
               "RelativeDocumentMoniker": "VOIDLINE\\Views\\Shared\\_Sidebar.cshtml",
@@ -75,18 +110,17 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-16T17:45:16.002Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Program.cs",
               "RelativeDocumentMoniker": "VOIDLINE\\Program.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\Program.cs",
               "RelativeToolTip": "VOIDLINE\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-17T12:05:05.928Z",
               "EditorCaption": ""
@@ -99,14 +133,14 @@
               "RelativeDocumentMoniker": "VOIDLINE\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\wwwroot\\css\\site.css*",
               "RelativeToolTip": "VOIDLINE\\wwwroot\\css\\site.css*",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-11-16T22:30:03.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "VOIDLINE.csproj",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\ASPNET\\VOIDLINE\\VOIDLINE\\VOIDLINE.csproj",
               "RelativeDocumentMoniker": "VOIDLINE\\VOIDLINE.csproj",
@@ -130,7 +164,7 @@
           ]
         },
         {
-          "DockedHeight": 95,
+          "DockedHeight": 421,
           "SelectedChildIndex": -1,
           "Children": [
             {

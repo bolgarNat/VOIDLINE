@@ -1,6 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using VOIDLINE.Models;
+using VOIDLINE.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<DBContext>(options =>
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
+
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped(typeof(DatabaseService<>));
 
 var app = builder.Build();
 

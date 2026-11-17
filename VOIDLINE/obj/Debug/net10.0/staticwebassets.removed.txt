@@ -1,8 +1,0 @@
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\Account_Icon.png
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\Basket_Icon.png
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-basket-100.png
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-menu-100.png
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-menu-squared-100.png
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-shopping-cart-100.png
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\icons8-user-100.png
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\icons\Menu_Icon.png
