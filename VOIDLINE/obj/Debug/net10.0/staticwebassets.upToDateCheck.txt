@@ -1,4 +1,3 @@
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\icons\Basket-icon.png
 wwwroot\icons\Menu-icon.png
@@ -68,9 +67,9 @@ wwwroot\photos\Houndstooth_tweed_blazer\pexels-frandany-227885104-13202131.jpg
 wwwroot\photos\Houndstooth_tweed_blazer\pexels-nelly-garcia-289676423-13180414.jpg
 wwwroot\photos\Houndstooth_tweed_blazer\pexels-rodrigo-zarate-222333438-13162602.jpg
 wwwroot\photos\Houndstooth_tweed_blazer\pexels-viridianaor-13202137.jpg
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\js\site.js
+wwwroot\css\site.css
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\favicon.ico
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\css\site.css
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\js\site.js
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -130,3 +129,4 @@ C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\lib\jquery\dist\jque
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\css\site.css

@@ -5,16 +5,20 @@
         </span>
     </div>
     <div class="navbar-item item-2">
-        <div class="item-2-text">
-            VOIDLINE
-        </div>
+        <a asp-controller="Home" asp-action="Home">
+            <div class="item-2-text">
+                VOIDLINE
+            </div>
+        </a>
     </div>
-    <div class="navbar-item item-3">
-        <span>
-            <img class="navbar-icon" src="~/icons/User-icon.png" />
-        </span>
+    <div class="navbar-item item-3" id="account">
+        <a asp-controller="Login" asp-action="Login">
+            <span>
+                <img class="navbar-icon" src="~/icons/User-icon.png" />
+            </span>
+        </a>
     </div>
-    <div class="navbar-item item-4">
+    <div class="navbar-item item-4" id="basket">
         <span>
             <img class="navbar-icon" src="~/icons/Basket-icon.png" />
         </span>

@@ -5,9 +5,7 @@
 
 const sidebar = document.getElementById("sidebar");
 
-const add_button_container = document.getElementById("add_button_container");
-
-const add_button = document.getElementById("add_button");
+const add_button_container = document.getElementById("add_button_container")
 
 const container_change_amount = document.getElementById("container-change-amount");
 

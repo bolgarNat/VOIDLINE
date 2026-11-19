@@ -1,0 +1,26 @@
+﻿<div class="container-page-login">
+	<div class="container-login">
+		<div class="login-header">
+			REGISTRATION
+		</div>
+		<form>
+			<label for="fname">Name</label>
+			<input type="text" id="name" name="name" placeholder="Your name">
+
+			<label for="fname">Surname</label>
+			<input type="text" id="surname" name="surname" placeholder="Your surname">
+
+			<label for="email">Email</label>
+			<input type="text" id="email" name="email" placeholder="email@gmail.com">
+
+			<label for="passwd">Password</label>
+			<input type="text" id="passwd" name="passwd" placeholder="*******">
+
+			<a asp-controller="Login" asp-action="Login">
+				<p>Already have an account?</p>
+			</a>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</div>

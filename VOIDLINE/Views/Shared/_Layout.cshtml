@@ -11,13 +11,13 @@
 </head>
 <body>
     <!-- Header -->
-    <aside>
+    <header>
         <partial name="_Header" />
-    </aside>
+    </header>
 
     <!-- Sidebar -->
     <aside>
-        <partial name="_Sidebar" />
+        @await Component.InvokeAsync("Sidebar")
     </aside>
 
     <!-- Body -->

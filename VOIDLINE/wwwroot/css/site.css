@@ -31,6 +31,9 @@ html {
 body {
     margin-bottom: 30px;
     color: var(--font-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -67,7 +70,11 @@ p {
     left: 0;
 }
 
+header,
+aside,
 .main-container {
+    position: static;
+    width: 100%;
 }
 
 .filter-part {
@@ -131,31 +138,38 @@ p {
 }
 
 .button-add-to-basket {
+}
+
+.button-add-one, .button-delete-one {
+    flex: 1;
+    width: auto;
+}
+
+input[type=submit],
+button {
     background: var(--primary-color);
     border-radius: 10px;
-    font-size: 18pt;
     padding: 3px;
     padding-left: 10px;
+    font-size: 18pt;
     padding-right: 10px;
     cursor: pointer;
+}
+
+input[type=submit] {
+    width: 100%;
+    margin-top: 20px
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .container-change-amount {
     display: flex;
     width: 100%;
     display: flex;
-}
-
-.button-add-one, .button-delete-one {
-    flex: 1;
-    background: var(--primary-color);
-    font-size: 18pt;
-    border-radius: 10px;
-    padding: 3px;
-    padding-left: 10px;
-    cursor: pointer;
-    font-size: 18pt;
-    width: auto;
 }
 
 .text-amount {
@@ -180,7 +194,7 @@ p {
 }
 
 .item-1 {
-    flex: 1;
+    flex: 2;
     text-align: left;
 }
 
@@ -247,3 +261,36 @@ p {
         background-color: var(--border-color);
         transform: scale(1.15);
     }
+
+.container-page-login {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.container-login {
+    width: 430px;
+    border-radius: 10px;
+    background: var(--border-color);
+    padding: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.login-header {
+    font-size: 24pt;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: var(--font-color);
+
+    border-radius: 5px;
+}

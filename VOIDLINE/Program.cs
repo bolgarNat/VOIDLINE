@@ -1,5 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using VOIDLINE.Models;
 using VOIDLINE.Models.Database;
 using VOIDLINE.Services;
 
@@ -13,14 +13,11 @@ builder.Services.AddDbContext<DBContext>(options =>
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession(options =>
-{
-    options.Cookie.Name = ".VOIDLINE.Session";
-    options.IdleTimeout = TimeSpan.FromSeconds(3600);
-    options.Cookie.IsEssential = true;
-});
-
+// Authentication via cookie
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options => options.LoginPath = "/login");
+// Authorization
+builder.Services.AddAuthorization();
 
 builder.Services.AddScoped(typeof(DatabaseService<>));
 
@@ -32,17 +29,20 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseSession();
-
 app.UseHttpsRedirection();
 app.UseRouting();
 
+// Authentication middleware 
+app.UseAuthentication();
+// Authorization middleware 
 app.UseAuthorization();
 
+// Access to wwwroot files
 app.UseStaticFiles();
 
 app.MapStaticAssets();
 
+// Default route
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Home}/{id?}")
