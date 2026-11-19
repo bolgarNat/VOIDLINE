@@ -13,9 +13,15 @@ public partial class Product
 
     public Guid Genderid { get; set; }
 
+    public Guid? Collectionid { get; set; }
+
+    public decimal Price { get; set; }
+
     public string? Description { get; set; }
 
     public virtual Category Category { get; set; } = null!;
+
+    public virtual Collection? Collection { get; set; }
 
     public virtual Gender Gender { get; set; } = null!;
 

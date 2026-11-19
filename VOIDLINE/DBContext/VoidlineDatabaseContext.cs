@@ -20,6 +20,8 @@ public partial class VoidlineDatabaseContext : DbContext
 
     public virtual DbSet<Categoryvariant> Categoryvariants { get; set; }
 
+    public virtual DbSet<Collection> Collections { get; set; }
+
     public virtual DbSet<Color> Colors { get; set; }
 
     public virtual DbSet<Gender> Genders { get; set; }
@@ -43,7 +45,9 @@ public partial class VoidlineDatabaseContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder
-            .HasPostgresEnum("valid_gender", new[] { "Male", "Female", "Boy", "Girl", "Unisex", "No Gender" })
+            .HasPostgresEnum("valid_gender", new[] { "Man", "Woman", "Boy", "Girl", "Unisex", "No_Gender" })
+            .HasPostgresEnum("valid_season", new[] { "Winter", "Winter_Spring", "Spring", "Spring_Summer", "Summer", "Summer_Autumn", "Atumn", "Autumn_Winter" })
+            .HasPostgresEnum("valid_size", new[] { "XXS", "XS", "S", "S_M", "M", "M_L", "L", "L_XL", "XL", "XXL", "XXXL" })
             .HasPostgresEnum("valid_sizes", new[] { "XXS", "XS", "S", "S-M", "M", "M-L", "L", "L-XL", "XL", "XXL", "XXXL" })
             .HasPostgresExtension("pgcrypto");
 
@@ -78,6 +82,26 @@ public partial class VoidlineDatabaseContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
                 .HasColumnName("name");
+        });
+
+        modelBuilder.Entity<Collection>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("collections_pkey");
+
+            entity.ToTable("collections");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("gen_random_uuid()")
+                .HasColumnName("id");
+            entity.Property(e => e.Name)
+                .HasMaxLength(100)
+                .HasColumnName("name");
+            entity.Property(e => e.Partnername)
+                .HasMaxLength(256)
+                .HasColumnName("partnername");
+            entity.Property(e => e.Releasedate)
+                .HasDefaultValueSql("now()")
+                .HasColumnName("releasedate");
         });
 
         modelBuilder.Entity<Color>(entity =>
@@ -129,16 +153,24 @@ public partial class VoidlineDatabaseContext : DbContext
                 .HasDefaultValueSql("gen_random_uuid()")
                 .HasColumnName("id");
             entity.Property(e => e.Categoryid).HasColumnName("categoryid");
+            entity.Property(e => e.Collectionid).HasColumnName("collectionid");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.Genderid).HasColumnName("genderid");
             entity.Property(e => e.Name)
                 .HasMaxLength(300)
                 .HasColumnName("name");
+            entity.Property(e => e.Price)
+                .HasPrecision(10, 2)
+                .HasColumnName("price");
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.Categoryid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("products_categoryid_fkey");
+
+            entity.HasOne(d => d.Collection).WithMany(p => p.Products)
+                .HasForeignKey(d => d.Collectionid)
+                .HasConstraintName("products_collectionid_fkey");
 
             entity.HasOne(d => d.Gender).WithMany(p => p.Products)
                 .HasForeignKey(d => d.Genderid)
@@ -179,9 +211,6 @@ public partial class VoidlineDatabaseContext : DbContext
                 .HasDefaultValueSql("gen_random_uuid()")
                 .HasColumnName("id");
             entity.Property(e => e.Colorid).HasColumnName("colorid");
-            entity.Property(e => e.Price)
-                .HasPrecision(10, 2)
-                .HasColumnName("price");
             entity.Property(e => e.Productid).HasColumnName("productid");
             entity.Property(e => e.Sale)
                 .HasPrecision(10, 2)

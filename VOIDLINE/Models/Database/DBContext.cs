@@ -130,6 +130,10 @@ public partial class DBContext : DbContext
             entity.Property(e => e.Categoryid).HasColumnName("categoryid");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.Genderid).HasColumnName("genderid");
+            entity.Property(e => e.Collectionid).HasColumnName("collectionid");
+            entity.Property(e => e.Price)
+                .HasPrecision(10, 2)
+                .HasColumnName("price");
             entity.Property(e => e.Name)
                 .HasMaxLength(300)
                 .HasColumnName("name");
@@ -143,6 +147,14 @@ public partial class DBContext : DbContext
                 .HasForeignKey(d => d.Genderid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("products_genderid_fkey");
+
+            entity.HasOne(d => d.Collection)
+                .WithMany(p => p.Products)
+                .HasForeignKey(d => d.Collectionid)
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("products_collectionid_fkey");
+
         });
 
         modelBuilder.Entity<Productmaterial>(entity =>
@@ -178,9 +190,6 @@ public partial class DBContext : DbContext
                 .HasDefaultValueSql("gen_random_uuid()")
                 .HasColumnName("id");
             entity.Property(e => e.Colorid).HasColumnName("colorid");
-            entity.Property(e => e.Price)
-                .HasPrecision(10, 2)
-                .HasColumnName("price");
             entity.Property(e => e.Productid).HasColumnName("productid");
             entity.Property(e => e.Sizeid).HasColumnName("sizeid");
             entity.Property(e => e.Stock).HasColumnName("stock");

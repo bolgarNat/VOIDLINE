@@ -3,19 +3,23 @@
 <html>
 	<body>
 		<div class="cardfilter-container">
-			<div class="filter-part"></div>
+		<div class="filter-part">FILTER<br />FILTER<br />FILTER<br />FILTER<br />FILTER<br />FILTER<br />FILTER</div>
 			<div class="card-container">
 				@foreach (var product in (List<Product>)ViewData["Product"]!)
 				{
 					<div class="product-card">
-						<div class="card-img"></div>
+					<img class="card-img" src="~/Photos/Houndstooth_tweed_blazer/pexels-frandany-227885104-13202131.jpg" />
 						<div class="card-colors"></div>
 					<p class="card-info" style="font-size: 18px; margin-top: 10px">@product.Name</p>
-						<p class="card-info" style="font-size: 16px; margin-bottom: 10px">Цена</p>
-						<div class="container-add-to-basket">
-							<button class="card-add-to-basket" style="font-size: 24px">Add</button>
-						</div>
-					
+					<p class="card-info" style="font-size: 16px; margin-bottom: 10px">@product.Price</p>
+					<div class="container-add-to-basket" id="add_button_container">
+						<div class="button-add-to-basket" onclick="change_amount()">Add</div>
+					</div>
+					<div class="container-change-amount" style="visibility: hidden" id="container-change-amount">
+						<div class="button-add-one">+</div>
+						<div class="text-amount">Количество</div>
+						<div class="button-delete-one">-</div>
+					</div>
 					</div>
 				}
 			</div>

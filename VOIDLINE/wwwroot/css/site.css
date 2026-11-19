@@ -76,7 +76,7 @@ p {
     top: 0;
     left: 0;
     height: 100vh;
-    background: var(--primary-color);
+    background: var(--bg-color);
 }
 
 .cardfilter-container {
@@ -94,7 +94,7 @@ p {
 .product-card {
     height: 480px;
     width: 250px;
-    background: var(--primary-color);
+    background: var(--bg-color);
 }
 
 .card-img {
@@ -102,6 +102,9 @@ p {
     height: calc(100% - 180px);
     margin: 15px;
     background: var(--bg-color);
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .card-colors {
@@ -127,8 +130,37 @@ p {
     justify-content: flex-end;
 }
 
-.card-add-to-basket {
-    
+.button-add-to-basket {
+    background: var(--primary-color);
+    border-radius: 10px;
+    font-size: 18pt;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.container-change-amount {
+    display: flex;
+    width: 100%;
+    display: flex;
+}
+
+.button-add-one, .button-delete-one {
+    flex: 1;
+    background: var(--primary-color);
+    font-size: 18pt;
+    border-radius: 10px;
+    padding: 3px;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 18pt;
+    width: auto;
+}
+
+.text-amount {
+    flex: 2;
+    width: auto;
 }
 
 

@@ -13,8 +13,6 @@ public partial class Productvariant
 
     public Guid Colorid { get; set; }
 
-    public decimal Price { get; set; }
-
     public int Stock { get; set; }
 
     public decimal Sale { get; set; }

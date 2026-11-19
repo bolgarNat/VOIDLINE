@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using VOIDLINE.Models;
 using VOIDLINE.Models.Database;
 using VOIDLINE.Services;
 
@@ -11,6 +12,16 @@ builder.Services.AddDbContext<DBContext>(options =>
 );
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".VOIDLINE.Session";
+    options.IdleTimeout = TimeSpan.FromSeconds(3600);
+    options.Cookie.IsEssential = true;
+});
+
+
 builder.Services.AddScoped(typeof(DatabaseService<>));
 
 var app = builder.Build();
@@ -21,10 +32,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
+
 app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseStaticFiles();
 
 app.MapStaticAssets();
 
