@@ -11,6 +11,20 @@ builder.Services.AddDbContext<DBContext>(options =>
     )
 );
 
+builder.Services.AddSingleton<PasswordService>(sp =>
+{
+    var config = sp.GetRequiredService<IConfiguration>();
+    var key = config["PasswordHash:Key"]
+        ?? throw new InvalidOperationException("PasswordHash:Key is not configured");
+
+    return new PasswordService(
+        System.Text.Encoding.UTF8.GetBytes(key)
+    );
+});
+
+builder.Services.AddSingleton<LoggerService>();
+builder.Services.AddScoped<EmailService>();
+
 builder.Services.AddControllersWithViews();
 
 // Authentication via cookie

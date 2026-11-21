@@ -5,11 +5,11 @@ namespace VOIDLINE.Services;
 
 public class DatabaseService<T> where T : class
 {
-    private readonly VOIDLINE.Models.Database.DBContext _context;
+    private readonly DBContext _context;
 
     private readonly Type type = typeof(T);
 
-    public DatabaseService(VOIDLINE.Models.Database.DBContext context)
+    public DatabaseService(DBContext context)
     {
         _context = context;
     }

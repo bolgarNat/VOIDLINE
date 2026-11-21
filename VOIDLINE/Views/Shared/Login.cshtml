@@ -1,20 +1,64 @@
-﻿<div class="container-page-login">
+﻿@model LoginModel
+
+<div class="container-page-login">
 	<div class="container-login">
 		<div class="login-header">
 			LOG IN
 		</div>
-		<form>
-			<label for="email">Email</label>
-			<input type="text" id="email" name="email" placeholder="email@gmail.com">
-			<label for="passwd">Password</label>
-			<input type="text" id="passwd" name="passwd" placeholder="*******">
+		<form asp-controller="Login" asp-action="LogIn" method="post">
 
-			<p>Forget password?</p>
+			<label asp-for="Email">Email</label>
+			<input type="text" asp-for="Email" placeholder="email@gmail.com">
+			<span asp-validation-for="Email"></span>
+
+			<label asp-for="Password">Password</label>
+			<input type="text" asp-for="Password" placeholder="*******">
+			<span asp-validation-for="Password"></span>
+
+			<a onclick="change_fp_modal_visability()">
+				<p>Forget password?</p>
+			</a>
 			<a asp-controller="Registration" asp-action="Registration">
 				<p>Do not have an account?</p>
 			</a>
+
+			<div class="validation-error" style="padding-left:3px; font-size:14pt;">@ViewData["LoginError"]</div>
+				
+			<div class="validation-error" style="padding-left:3px; font-size:14pt;">@ViewData["SendEmailError"]</div>
 			
-			<input type="submit" value="Submit">
+			<input type="submit" value="Enter">
+		</form>
+	</div>
+
+	@ViewData["CodeVarification"]
+</div>
+
+<!-- Modal Forgot password -->
+<div class="modal-overlay" id="fp_modal">
+	<div class="modal">
+		<div class="container-add-to-basket">
+			<button style="font-size: 12pt;" onclick="change_fp_modal_visability()">
+				×
+			</button>
+		</div>
+
+		<p style="font-size: 14pt">Enter your email to get a message with code</p>
+
+		<form asp-controller="Login"
+				asp-action="ForgotPassword"
+				method="post"
+				id="forgot_password_form">
+			<label>Email</label>
+			<input type="text" name="Email" placeholder="email@gmail.com">
+			<span asp-validation-for="Email"></span>
+
+			<input type="submit" value="Enter">
 		</form>
 	</div>
 </div>
+
+<!-- Modal Code varification -->
+@if (TempData["CodeVarification"] is true)
+{
+	<partial name="Modal/CodeVarification" />
+}
