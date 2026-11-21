@@ -188,6 +188,6 @@ C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\bin\Debug\net10.0\Npgsql.Ent
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\bin\Debug\net10.0\MailKit.dll
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\bin\Debug\net10.0\MimeKit.Core.dll
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\gzegdillc8-{0}-s5vcwdc99b-s5vcwdc99b.gz
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\415w9lw4rd-{0}-yy93z5zov3-yy93z5zov3.gz
-C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\ezm1zofju1-{0}-5isab0n05b-5isab0n05b.gz
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\gzegdillc8-{0}-6aqhye2g6i-6aqhye2g6i.gz
+C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\obj\Debug\net10.0\compressed\ezm1zofju1-{0}-c5e4s7bh80-c5e4s7bh80.gz

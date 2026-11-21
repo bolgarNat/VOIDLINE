@@ -25,8 +25,6 @@ builder.Services.AddSingleton<PasswordService>(sp =>
 builder.Services.AddSingleton<LoggerService>();
 builder.Services.AddScoped<EmailService>();
 
-builder.Services.AddControllersWithViews();
-
 // Authentication via cookie
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options => options.LoginPath = "/login");
@@ -34,6 +32,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddAuthorization();
 
 builder.Services.AddScoped(typeof(DatabaseService<>));
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
@@ -45,6 +48,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseSession();
 
 // Authentication middleware 
 app.UseAuthentication();

@@ -1,6 +1,4 @@
-﻿
-
-<div class="modal-overlay active" id="cv_modal">
+﻿<div class="modal-overlay active" id="cv_modal">
 	<div class="modal">
 		<div class="container-add-to-basket">
 			<button style="font-size: 12pt;" onclick="change_cv_modal_visability()">
@@ -12,23 +10,24 @@
 
 		<form asp-controller="@TempData["ControllerName"]"
 			  asp-action="CodeVarification"
-			  method="post">
+			  method="post"
+			  id="codeForm">
 
 			<div class="container-cv">
-				<input type="text" class="cv" name="digit1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-				<input type="text" class="cv" name="digit2" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-				<input type="text" class="cv" name="digit3" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-				<input type="text" class="cv" name="digit4" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+				<input type="text" class="cv" name="digit1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" autocomplete="off"/>
+				<input type="text" class="cv" name="digit2" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" autocomplete="off" />
+				<input type="text" class="cv" name="digit3" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" autocomplete="off" />
+				<input type="text" class="cv" name="digit4" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" autocomplete="off" />
 
 			</div>
 
 			<div class="validation-error" style="padding-left:3px; font-size:11pt;">@TempData["CodeError"]</div>
 
-			<a onclick="@TempData["ChangeEmailOnClick"]">
+			<a onclick="resend_email_form()">
 				<p>Change email</p>
 			</a>
 
-			<a onclick="send_form()">
+			<a onclick="resend_code_form()">
 				<p>Resend code</p>
 			</a>
 
@@ -39,8 +38,12 @@
 			  asp-action="@TempData["ActionName"]"
 			  method="post"
 			  id="resend_code">
+		</form>
 
-			<input type="hidden" name="email" value="@TempData["Email"]">
+		<form asp-controller="@TempData["ControllerName"]"
+			  asp-action="@TempData["ActionChangeEmail"]"
+			  method="@TempData["MethodChangeEmail"]"
+			  id="change_email">
 		</form>
 	</div>
 </div>

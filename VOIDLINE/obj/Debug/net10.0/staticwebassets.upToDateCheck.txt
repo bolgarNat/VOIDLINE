@@ -1,6 +1,9 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\photos\Houndstooth_tweed_blazer\pexels-viridianaor-13202137.jpg
+wwwroot\icons\Basket-icon.png
+wwwroot\icons\Menu-icon.png
+wwwroot\icons\User-icon.png
+wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -61,13 +64,10 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\icons\User-icon.png
-wwwroot\icons\Basket-icon.png
-wwwroot\icons\Menu-icon.png
-wwwroot\photos\Houndstooth_tweed_blazer\pexels-rodrigo-zarate-222333438-13162602.jpg
-wwwroot\photos\Houndstooth_tweed_blazer\pexels-nelly-garcia-289676423-13180414.jpg
 wwwroot\photos\Houndstooth_tweed_blazer\pexels-frandany-227885104-13202131.jpg
-wwwroot\js\site.js
+wwwroot\photos\Houndstooth_tweed_blazer\pexels-nelly-garcia-289676423-13180414.jpg
+wwwroot\photos\Houndstooth_tweed_blazer\pexels-rodrigo-zarate-222333438-13162602.jpg
+wwwroot\photos\Houndstooth_tweed_blazer\pexels-viridianaor-13202137.jpg
 wwwroot\varification_code_message.html
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\css\site.css
 C:\Users\Asus\source\repos\ASPNET\VOIDLINE\VOIDLINE\wwwroot\favicon.ico

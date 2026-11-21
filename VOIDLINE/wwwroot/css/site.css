@@ -288,13 +288,13 @@ a {
     text-align: center;
 }
 
+input[type=password],
 input[type=text] {
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
     border: none;
     border-bottom: var(--font-color);
-
     border-radius: 5px;
 }
 

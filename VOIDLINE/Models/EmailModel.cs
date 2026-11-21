@@ -4,9 +4,7 @@ namespace VOIDLINE.Models;
 
 public class EmailModel
 {
-    [Required]
-    private string EmailAddress { get; set; }
-
-    [Required]
-    private string EmailPasswd { get; set; }
+    [Required(ErrorMessage = "Email is required")]
+    [EmailAddress(ErrorMessage = "Must be a valid email address")]
+    public string Email { get; set; } = "";
 }

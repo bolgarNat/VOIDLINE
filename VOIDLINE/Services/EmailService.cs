@@ -2,6 +2,7 @@
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
+using VOIDLINE.Models;
 
 namespace VOIDLINE.Services;
 
@@ -11,16 +12,16 @@ public class EmailService
     
     private readonly LoggerService _loggerService;
 
-    private string _code;
+    private MessageModel _messageModel;
 
     public EmailService(LoggerService loggerService)
     {
         _loggerService = loggerService;
     }
 
-    public string GetCode()
+    public MessageModel GetMessageModel()
     {
-        return _code;
+        return _messageModel;
     }
 
     public async Task<bool> SendEmail(string email, string? subject, string? message)
@@ -29,11 +30,11 @@ public class EmailService
 
         if (subject == null || message == null)
         {
-            subject = "Verification Code";
-            message = await File.ReadAllTextAsync("wwwroot/varification_code_message.html");
-
-            _code = GenereteCode();
-            message = message.Replace("{{CODE}}", _code);
+            _messageModel = await CodeVarificationService.ConfigVarificationMessage();
+        }
+        else
+        {
+            _messageModel = new MessageModel(subject, message, null);
         }
 
         using var emailMessage = new MimeMessage();
@@ -45,10 +46,10 @@ public class EmailService
 
             emailMessage.From.Add(new MailboxAddress("VOIDLINE", emailAddress));
             emailMessage.To.Add(new MailboxAddress("", email));
-            emailMessage.Subject = subject;
+            emailMessage.Subject = _messageModel.GetSubject();
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
-                Text = message
+                Text = _messageModel.GetMessage()
             };
 
             using (var client = new SmtpClient())
@@ -67,18 +68,5 @@ public class EmailService
             _loggerService.LogError(ex.ToString());
             return false;
         }
-    }
-
-    private string GenereteCode()
-    {
-        Random rand = new Random();
-        string code = "";
-
-        for (int i = 0; i<4; i++)
-        {
-            code = code + (rand.Next(9).ToString());
-        }
-
-        return code;
     }
 }

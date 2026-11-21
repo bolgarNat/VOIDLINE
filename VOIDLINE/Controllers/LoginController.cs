@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using VOIDLINE.Extensions;
 using VOIDLINE.Models;
 using VOIDLINE.Models.Database;
 using VOIDLINE.Services;
@@ -41,25 +44,60 @@ public class LoginController : Controller
             }
         }
 
+        return Redirect("/");
+    }
+
+    [HttpGet("open-forgot-password")]
+    public async Task<IActionResult> OpenForgetPassword()
+    {
+        TempData["ForgotPassword"] = true;
+
         return RedirectToAction(nameof(Login));
     }
 
+
     [HttpPost("forgot-password")]
-    public async Task<IActionResult> ForgotPassword(string email)
+    public async Task<IActionResult> ForgotPassword(EmailModel model)
     {
-        if (email != null)
+        TempData["ForgotPassword"] = true;
+
+        if (model.Email != String.Empty)
         {
-            TempData["Email"] = email;
+            HttpContext.Session.SetString(
+                "EmailModel", JsonSerializer.Serialize(model));
+
+            if (!ModelState.IsValid)
+                return View("Login");
+        }
+        else
+        {
+            var json = HttpContext.Session.GetString("EmailModel");
+            model = JsonSerializer.Deserialize<EmailModel>(json);
         }
 
-        if (await _emailService.SendEmail(TempData["Email"]!.ToString()!, null, null))
+        using (var context = new DBContext())
+        {
+            var user = context.Users.FirstOrDefault(x => model.Email == x.Email);
+
+            if (user == null)
+            {
+                ViewData["EmailNotFound"] = "User not found";
+                return RedirectToAction(nameof(Login));
+            }
+        }
+
+        if (await _emailService.SendEmail(model.Email, null, null))
         {
             TempData["CodeVarification"] = true;
+            TempData["ForgotPassword"] = false;
+
             TempData["ControllerName"] = "Login";
             TempData["ActionName"] = "ForgotPassword";
+            TempData["ActionChangeEmail"] = "OpenForgetPassword";
+            TempData["MethodChangeEmail"] = "get";
             TempData["ChangeEmailOnClick"] = "change_fp_modal_visability();change_cv_modal_visability()";
 
-            TempData["Code"] = _emailService.GetCode();
+            TempData["Code"] = _emailService.GetMessageModel().GetCode();
         }
         else
         {
@@ -77,7 +115,7 @@ public class LoginController : Controller
 
         if (code == TempData["Code"]!.ToString())
         {
-            return Redirect("/");
+            TempData["NewPassword"] = true;
         }
         else
         {
@@ -86,5 +124,47 @@ public class LoginController : Controller
         }
 
         return RedirectToAction(nameof(Login));
+    }
+
+    [HttpPost("new-password")]
+    public async Task<IActionResult> NewPassword(PasswordModel newPasswordModel)
+    {
+        TempData["NewPassword"] = true;
+
+        if (!ModelState.IsValid)
+            return View("Login");
+
+        if (newPasswordModel.Password != newPasswordModel.ConfirmPassword)
+        {
+            ViewData["PasswordError"] = "Passwords do not match";
+            return RedirectToAction(nameof(Login));
+        }
+
+        try
+        {
+            var json = HttpContext.Session.GetString("EmailModel");
+            EmailModel? emailModel = JsonSerializer.Deserialize<EmailModel>(json);
+
+            using DBContext context = new DBContext();
+
+            var user = await context.Users.FirstOrDefaultAsync(x => emailModel.Email == x.Email);
+            if (user is null)
+            {
+                ViewData["PasswordError"] = "User not found";
+                return RedirectToAction(nameof(Login));
+            }
+
+            user.Password = _passwordService.PasswordConvert(newPasswordModel.Password);
+
+            await context.SaveChangesAsync();
+
+            TempData["NewPassword"] = false;
+            return RedirectToAction(nameof(Login));
+        }
+        catch (Exception ex)
+        {
+            ViewData["PasswordError"] = "Cannot access database";
+            return RedirectToAction(nameof(Login));
+        }
     }
 }
